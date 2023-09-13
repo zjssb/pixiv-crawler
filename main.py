@@ -7,7 +7,7 @@ import requests as req
 
 # 作家 uid
 uid = ''
-
+# 模拟浏览器header
 header = {
     'User-Agent': ',
     'Cookie': '',
@@ -46,10 +46,12 @@ def img(urls):
         print(html.status_code)
         error(imgId, name)
 
+# 下载错误时，向图片文件夹中创建txt文件，写入下载错误的图片id和名称（为获取到名称按xxx处理）
 def error(id, name):
     with open(f'./png/{uid}/' + '下载失败.txt', 'a+', encoding='utf-8') as f:
         f.write(f'{id}:{name}' + '\n')
         f.close()
+    # 下载错误时，增加随机延时的时间
     deltime(-1)
 
 def deltime(t):
@@ -71,7 +73,7 @@ if __name__ == '__main__':
     try:
         os.mkdir(f'./png/{uid}')  # 检测画师文件夹是否创建
     except:
-        print('当前画师插画已经下载完毕，前往文件目录查看')
+        print('已存在当前画师插画文件夹，请前往文件目录查看')
         exit()
 
     delay = 1
@@ -104,4 +106,5 @@ if __name__ == '__main__':
         else:
             url = json.loads(res)['body']['works'][i]
             img(url)
+            # 随机延时下载
             time.sleep(random.randint(delay, delay + 2) + random.random())
