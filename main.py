@@ -9,6 +9,7 @@ import requests as req
 uid = ''
 # 模拟浏览器header
 header = {
+    'Referer':'https://www.pixiv.net/',
     'User-Agent': ',
     'Cookie': '',
 }
