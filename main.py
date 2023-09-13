@@ -6,22 +6,11 @@ import re
 import requests as req
 
 # 作家 uid
-uid = '6121219'
+uid = ''
 
 header = {
-    'Referer': 'https://www.pixiv.net/users/6049901/artworks?p=1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                  'Chrome/113.0.0.0 Safari/537.36',
-    'Cookie': 'login_ever=yes; first_visit_datetime_pc=2022-09-19+11%3A39%3A43; p_ab_id=5; p_ab_id_2=6; '
-              'p_ab_d_id=878245443; yuid_b=EGZHhBc; _gid=GA1.2.1312501972.1691379192; '
-              'PHPSESSID=38092362_klBtEkekQr4GW9sX3wTlrj7JCNj2GaQK; device_token=e40723202bbec53f7296cbc91e9bd7a7; '
-              'privacy_policy_agreement=6; _ga_MZ1NL4PHH0=GS1.1.1691398498.1.1.1691398658.0.0.0; c_type=24; '
-              'privacy_policy_notification=0; a_type=0; b_type=1; QSI_S_ZN_5hF4My7Ad6VNNAi=v:0:0; login_ever=yes; '
-              '__cf_bm=zWtzMttsYWX1T4zpcf.hj1n41_H1MMcfOIYiC_LZydQ-1691472006-0-ASUtkTK/PFBWhinXx1rNlhPpDNxbvfbWzesg'
-              '+rGnTzxRuaJXG8AdYsvX/OvfEyOZn5T55ASYKUmHcSiLW9cNIOGKGludb8IOBIgGPWKTzeG7; '
-              'cf_clearance=X7wdDX2CWmbzFfW3A_iG0NeqQ_iihIF4QAgFvlqkYAs-1691472206-0-1-d94fcfed.b187dd42.8e4e900d-0.2'
-              '.1691472206; _gat_UA-1830249-3=1; _ga=GA1.1.126982131.1663555186; '
-              '_ga_75BBYNYN9J=GS1.1.1691470097.9.1.1691472218.0.0.0',
+    'User-Agent': ',
+    'Cookie': '',
 }
 
 def img(urls):
