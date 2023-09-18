@@ -5,7 +5,7 @@ import threads
 
 
 # 作家 uid
-uid = '18302514'
+uid = ''
 # 线程的个数
 threadNum = 1
 # 浏览器header
